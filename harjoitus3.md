@@ -64,3 +64,5 @@
 	      - pkg: openvpn
 
 	Tämä tiedosto tallennetaan ja ajetaan moduuli $ sudo salt '*' state.apply openvpn
+	Ajetaan komento vielä uudestaan ja tarkistetaan moduulin status ja varmuuden vuoksi restartataan
+	$ sudo systemctl restart openvpn ja $ sudo systemctl status openvpn
