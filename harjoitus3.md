@@ -17,4 +17,8 @@
 
 	Testasin vielä, että muutokset tulevat myös GitHubiin.
 
+	#d) Näytä esimerkit kommennoista 'git log', 'git diff' ja 'git blame'
+
+	$ git log
+
 	
