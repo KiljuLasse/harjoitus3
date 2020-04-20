@@ -46,4 +46,21 @@
 	ja jäljelle on jäänyt vain "fiksua tekstia" mikä commitattiin. Reset tehtiin siis viimeisimpään
 	committiin, eli vain fiksu teksti jäi jäljelle.
 
-	
+	#f) Tee uusi salt-moduuli.
+
+	Asennettava moduuli on openvpn. Ensin tehdään $ sudo apt-get update
+
+	Luodaan oma asennettavalle moduulille oma kansio salt-hakemistoon asioiden selkeyttämiseksi, eli
+	$ sudo mkdir /srv/salt/openvpn
+
+	Luodaan kansioon tiedosto init.sls, $ sudoedit init.sls johon kirjoitetaan:
+
+	openvpn:
+	  pkg.installed: []
+
+	  service.running:
+	    - enable: True
+	    - watch:
+	      - pkg: openvpn
+
+	Tämä tiedosto tallennetaan ja ajetaan moduuli $ sudo salt '*' state.apply openvpn
