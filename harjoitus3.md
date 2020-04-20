@@ -21,4 +21,17 @@
 
 	$ git log
 
-	Tämä
+	Tämä komento kertoo kuka on tehnyt muutoksia, milloin ja mikä oli kommentti muutosta tehtäessä.
+	Näyttää siis toisin sanoen logit commitista.
+
+	$ git diff
+
+	Komento näyttää mihin tiedotoihin on tehty muutoksia ja listaa kuinka paljon muutoksia on tehty
+	+ ja - merkeillä. Listaa alle myös poistetut ja lisätyt muutokset kokonaisuutena.
+
+	$ git blame
+
+	Komento listaa kuka on muokannut viimeksi tiettyä kohtaa halutusta tiedostosta. Tässä tapauksessa
+	$ git blame /home/lasse/harjoitus3/harjoitus3.md
+
+	
