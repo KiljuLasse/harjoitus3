@@ -34,4 +34,16 @@
 	Komento listaa kuka on muokannut viimeksi tiettyä kohtaa halutusta tiedostosta. Tässä tapauksessa
 	$ git blame /home/lasse/harjoitus3/harjoitus3.md
 
+	#e) Tee tyhmä muutos gittiin.
+
+	Luodaan ensin uusi tiedosto nimeltä tyhma $ sudo nano tyhma
+	Kirjoitetaan tiedostoon ensin "fiksua tekstia" ja tallennetaan tiedosto.
+	Lisätään tehdyt muutokset $ git add tyhma.txt ja $ git commit
+	Tarkistetaan vielä muutokset käyttämällä $ git log
+
+	Seuraavaksi mennään lisäämään "tyhma" tiedostoon teksti "tyhmaa tekstiä" ja ei tehdä committia.
+	Tehdään $ git reset --hard ja huomataan, että teksti "tyhmaa tekstia" on kadonnut tiedostosta
+	ja jäljelle on jäänyt vain "fiksua tekstia" mikä commitattiin. Reset tehtiin siis viimeisimpään
+	committiin, eli vain fiksu teksti jäi jäljelle.
+
 	
